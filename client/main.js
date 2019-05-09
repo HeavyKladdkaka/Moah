@@ -5,7 +5,7 @@ import {
   ReactiveVar
 } from 'meteor/reactive-var';
 
-import './login.html';
+import './profile.html';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
