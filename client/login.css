@@ -1,6 +1,6 @@
-.profile{
+.login{
   height: 100%;
   width: auto;
-  background-image: url('images/profile.png');
+  background-image: url('images/log-in.png');
   background-size: cover;
 }
