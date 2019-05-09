@@ -1,6 +1,4 @@
-.profile{
-  height: 100%;
+.profile-background{
+  height: 736px;
   width: auto;
-  background-image: url('images/profile.png');
-  background-size: cover;
 }
