@@ -5,7 +5,7 @@ import {
   ReactiveVar
 } from 'meteor/reactive-var';
 
-import './profile.html';
+import './no-games-available.html';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
