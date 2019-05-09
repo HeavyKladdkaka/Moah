@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="devices.min.css" type="text/css">
+  <link rel="stylesheet" href="background.css" type="text/css">
+</head>
+
+<body>
+  {{> iphone}}
+</body>
+
+<template name="iphone">
+  <div class="marvel-device iphone8plus black">
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="volume"></div>
+    <div class="camera"></div>
+    <div class="sensor"></div>
+    <div class="speaker"></div>
+    <div class="screen">
+      <div class="achievement">
+        <img class="background-image" src='images/Achievement.png' usemap="#achievementmap">
+
+        <map name="achievementmap">
+          <area shape="rect" coords="0,0,414,736" alt="Sun" href="#">
+
+        </map>
+      </div>
+    </div>
+    <div class="home"></div>
+    <div class="bottom-bar"></div>
+  </div>
+</template>
