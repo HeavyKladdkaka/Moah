@@ -2,3 +2,18 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.profile-container{
+  position: relative;
+  text-align: center;
+}
+
+.profileName{
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8em;
+  color: #fff;
+  font-family: 'Atma', sans-serif;
+}

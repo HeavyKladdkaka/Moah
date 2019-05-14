@@ -101,9 +101,25 @@ FlowRouter.route('/inGameAnswers', {
   }
 });
 
+
+FlowRouter.route('/login', {
+  name: 'login',
+  action(){
+    BlazeLayout.render('iphone', {main: 'login'});
+  }
+});
+
 FlowRouter.route('/inGameHighscore', {
   name: 'inGameHighscore',
   action(){
     BlazeLayout.render('iphone', {main: 'inGameHighscore'});
+  }
+});
+
+/**/
+Template.profile.helpers({
+  profileName: function(){
+    var name = (Meteor.user().profile.name).split(' ');
+    return name[0];
   }
 });

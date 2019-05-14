@@ -1,24 +1,25 @@
 <head>
   <link rel="stylesheet" href="devices.min.css" type="text/css">
   <link rel="stylesheet" href="main.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Atma:700" rel="stylesheet">
 </head>
 
 <body></body>
 
 <template name="iphone">
-<main>
-  <div class="marvel-device iphone8plus black">
-    <div class="top-bar"></div>
-    <div class="sleep"></div>
-    <div class="volume"></div>
-    <div class="camera"></div>
-    <div class="sensor"></div>
-    <div class="speaker"></div>
-    <div class="screen">{{> Template.dynamic template=main}}</div>
-    <div class="home"></div>
-    <div class="bottom-bar"></div>
-  </div>
-</main>
+  <main>
+    <div class="marvel-device iphone8plus black">
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="volume"></div>
+      <div class="camera"></div>
+      <div class="sensor"></div>
+      <div class="speaker"></div>
+      <div class="screen">{{> Template.dynamic template=main}}</div>
+      <div class="home"></div>
+      <div class="bottom-bar"></div>
+    </div>
+  </main>
 </template>
 
 <template name="login">
@@ -40,13 +41,19 @@
 </template>
 
 <template name="profile">
-  <img class="profile-background" src='images/profile.png' usemap="#profilemap">
-  <map name="profilemap">
-    <a href="joinGame"><area id="goBack" shape="rect" coords="10,26,43,59" alt="Sun"></a>
-    <a href="chatt"><area id="chatt" shape="rect" coords="356,25,394,63" alt="Sun"></a>
-    <a href="achievements"><area id="seeAll" shape="rect" coords="24,592,390,645" alt="Sun"></a>
-    <a href="chooseAvatar"><area id="editAvatar" shape="circle" coords="267,208,22" alt="Sun"></a>
-  </map>
+  <div class="profile-container">
+
+
+    <img class="profile-background" src='images/profileNoName.png' usemap="#profilemap">
+    <div class="profileName">{{profileName}}</div>
+
+    <map name="profilemap">
+      <a href="joinGame"><area id="goBack" shape="rect" coords="10,26,43,59" alt="Sun"></a>
+      <a href="chatt"><area id="chatt" shape="rect" coords="356,25,394,63" alt="Sun"></a>
+      <a href="achievements"><area id="seeAll" shape="rect" coords="24,592,390,645" alt="Sun"></a>
+      <a href="chooseAvatar"><area id="editAvatar" shape="circle" coords="267,208,22" alt="Sun"></a>
+    </map>
+  </div>
 </template>
 
 <template name="chooseAvatar">
