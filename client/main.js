@@ -17,6 +17,13 @@ FlowRouter.route('/joinGame', {
   }
 });
 
+FlowRouter.route('/noGamesAvailable', {
+  name: 'noGamesAvailable',
+  action(){
+    BlazeLayout.render('iphone', {main: 'noGamesAvailable'});
+  }
+});
+
 FlowRouter.route('/profile', {
   name: 'profile',
   action(){
