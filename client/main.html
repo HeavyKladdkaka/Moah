@@ -5,6 +5,7 @@
 
 <body></body>
 
+<!-- iPhone template used for all different screens-->
 <template name="iphone">
 <main>
   <div class="marvel-device iphone8plus black">
@@ -21,24 +22,34 @@
 </main>
 </template>
 
+<!-- Login screen template-->
 <template name="login">
   <div class="login">
     {{> loginButtons}}
   </div>
 </template>
 
+<!-- Join game screen template-->
 <template name="joinGame">
   <img usemap="#profilemap" border="0" height="736" src="images/Join-game.png" width="414"/>
   <map name="profilemap">
     <a href="waitingForPlayer"><area id="joinGame" shape="rect" coords="36,400,379,450" alt="Sun"></a>
     <a href="profile"><area id="profile" shape="rect" coords="36,473,379,523" alt="Sun"></a>
+    <a href="noGamesAvailable"><area id="noGamesAvailable" shape="rect" coords="121,172,304,245" alt="Sun"></a>
   </map>
 </template>
 
+<!-- No games available screen template-->
 <template name="noGamesAvailable">
+  <img usemap="#profilemap" border="0" height="736"  src="images/No-games-available.png" width="414"/>
+  <map name="profilemap">
+    <a href="profile"><area shape="rect" coords="36,473,379,523" alt="Sun"></a>
+    <a href="joinGame"><area id="joinGame" shape="rect" coords="121,172,304,245" alt="Sun"></a>
+  </map>
 
 </template>
 
+<!-- Profile screen template-->
 <template name="profile">
   <img class="profile-background" src='images/profile.png' usemap="#profilemap">
   <map name="profilemap">
@@ -49,6 +60,7 @@
   </map>
 </template>
 
+<!-- Choose avatar screen template-->
 <template name="chooseAvatar">
   <img usemap="#profilemap" border="0" height="736"  src="images/Choose-avatar.png" width="414">
   <map name="profilemap">
@@ -57,6 +69,7 @@
   </map>
 </template>
 
+<!-- Chatt screen template-->
 <template name="chatt">
   <img usemap="#profilemap" border="0" height="736"  src="images/chatt.png" width="414"/>
   <map name="profilemap">
@@ -64,6 +77,7 @@
   </map>
 </template>
 
+<!-- Achievements screen template-->
 <template name="achievements">
   <img usemap="#profilemap" border="0" height="736"  src="images/Achievements.png" width="414"/>
   <map name="profilemap">
@@ -72,6 +86,7 @@
   </map>
 </template>
 
+<!-- Achievement screen template-->
 <template name="achievement">
   <img usemap="#profilemap" border="0" height="736"  src="images/Achievement.png" width="414"/>
   <map name="profilemap">
@@ -79,6 +94,7 @@
   </map>
 </template>
 
+<!-- Waiting for player screen template-->
 <template name="waitingForPlayer">
   <img usemap="#profilemap" border="0" height="736"  src="images/waiting-for-player.png" width="414"/>
   <map name="profilemap">
@@ -86,6 +102,7 @@
   </map>
 </template>
 
+<!-- Ready for a game screen template-->
 <template name="readyForGame">
   <img usemap="#profilemap" border="0" height="736"  src="images/ready-for-game.png" width="414"/>
   <map name="profilemap">
@@ -93,6 +110,7 @@
   </map>
 </template>
 
+<!-- I'm ready screen template-->
 <template name="im-ready">
   <img usemap="#profilemap" border="0" height="736"  src="images/im-ready.png" width="414"/>
   <map name="profilemap">
@@ -100,6 +118,7 @@
   </map>
 </template>
 
+<!-- In game screen template-->
 <template name="inGame">
   <img usemap="#profilemap" border="0" height="736"  src="images/in-game.png" width="414"/>
   <map name="profilemap">
@@ -107,6 +126,7 @@
   </map>
 </template>
 
+<!-- In game keyboard screen template-->
 <template name="inGameKeyboard">
   <img usemap="#profilemap" border="0" height="736"  src="images/in-game-keyboard.png" width="414"/>
   <map name="profilemap">
@@ -114,6 +134,7 @@
   </map>
 </template>
 
+<!-- In game chatt screen template-->
 <template name="inGameChatt">
   <img usemap="#profilemap" border="0" height="736"  src="images/in-game-chatt.png" width="414"/>
   <map name="profilemap">
@@ -121,6 +142,7 @@
   </map>
 </template>
 
+<!-- In game answers creen template-->
 <template name="inGameAnswers">
   <img usemap="#profilemap" border="0" height="736"  src="images/in-game-answers.png" width="414"/>
   <map name="profilemap">
@@ -128,6 +150,7 @@
   </map>
 </template>
 
+<!-- In game highscore screen template-->
 <template name="inGameHighscore">
   <img usemap="#profilemap" border="0" height="736"  src="images/in-game-highscore.png" width="414"/>
   <map name="profilemap">
