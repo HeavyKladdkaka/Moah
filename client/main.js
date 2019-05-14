@@ -3,6 +3,17 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
+FlowRouter.triggers.enter([function(context, redirect){
+  if(!Meteor.userId()){
+    console.log('utloggad');
+    FlowRouter.go('login');
+    console.log('gick till login');
+  }
+  else {
+    console.log('inloggad');
+  }
+}]);
+
 FlowRouter.route('/', {
   name: 'hej',
   action(){
@@ -17,6 +28,13 @@ FlowRouter.route('/joinGame', {
   }
 });
 
+FlowRouter.route('/settings', {
+  name: 'settings',
+  action(){
+    BlazeLayout.render('iphone', {main: 'settings'});
+  }
+});
+
 FlowRouter.route('/noGamesAvailable', {
   name: 'noGamesAvailable',
   action(){
@@ -27,7 +45,13 @@ FlowRouter.route('/noGamesAvailable', {
 FlowRouter.route('/profile', {
   name: 'profile',
   action(){
-    BlazeLayout.render('iphone', {main: 'profile'});
+    if (Meteor.userId()==null) {
+      console.log('HEJ');
+      BlazeLayout.render('iphone', {main: 'login'});
+    }
+    else {
+      BlazeLayout.render('iphone', {main: 'profile'});
+    }
   }
 });
 
@@ -113,6 +137,9 @@ FlowRouter.route('/login', {
   name: 'login',
   action(){
     BlazeLayout.render('iphone', {main: 'login'});
+    if(Meteor.userId()){
+      FlowRouter.go('joinGame');
+    }
   }
 });
 

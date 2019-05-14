@@ -53,17 +53,24 @@
 <!-- Profile screen template-->
 <template name="profile">
   <div class="profile-container">
-
-
     <img class="profile-background" src='images/profileNoName.png' usemap="#profilemap">
     <div class="profileName">{{profileName}}</div>
-
     <map name="profilemap">
       <a href="joinGame"><area id="goBack" shape="rect" coords="10,26,43,59" alt="Sun"></a>
       <a href="chatt"><area id="chatt" shape="rect" coords="356,25,394,63" alt="Sun"></a>
       <a href="achievements"><area id="seeAll" shape="rect" coords="24,592,390,645" alt="Sun"></a>
       <a href="chooseAvatar"><area id="editAvatar" shape="circle" coords="267,208,22" alt="Sun"></a>
+      <a href="settings"><area id="settings" shape="rect" coords="13,90,46,123" alt="Sun"></a>
     </map>
+  </div>
+</template>
+
+<template name="settings">
+  <div class="container">
+    <div class="link"><a href="profile"></a></div>
+  </div>
+  <div class="login2">
+    {{> loginButtons}}
   </div>
 </template>
 

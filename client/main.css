@@ -17,3 +17,46 @@ body {
   color: #fff;
   font-family: 'Atma', sans-serif;
 }
+
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login{
+  height: 100%;
+  width: auto;
+  background-image: url('images/empty_title.png');
+  background-size: cover;
+}
+
+.login2{
+  height: 100%;
+  width: auto;
+  /*background-image: url('images/settings.png');
+  background-size: cover;*/
+  background: url("images/settings.png") repeat scroll 0 0 transparent;
+  background-size: cover;
+   }
+    .link{
+        padding-left: 26px;
+        padding-top: 23px;
+        position: absolute;
+    }
+    .link a{
+      padding-left: 0;
+      display: block;
+      height: 48px;
+      width: 67px;
+    }
+    .container{
+    position: relative;
+    color: black;
+}
