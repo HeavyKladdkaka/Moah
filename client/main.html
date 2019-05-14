@@ -1,0 +1,136 @@
+<head>
+  <link rel="stylesheet" href="devices.min.css" type="text/css">
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body></body>
+
+<template name="iphone">
+<main>
+  <div class="marvel-device iphone8plus black">
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="volume"></div>
+    <div class="camera"></div>
+    <div class="sensor"></div>
+    <div class="speaker"></div>
+    <div class="screen">{{> Template.dynamic template=main}}</div>
+    <div class="home"></div>
+    <div class="bottom-bar"></div>
+  </div>
+</main>
+</template>
+
+<template name="login">
+  <div class="login">
+    {{> loginButtons}}
+  </div>
+</template>
+
+<template name="joinGame">
+  <img usemap="#profilemap" border="0" height="736" src="images/Join-game.png" width="414"/>
+  <map name="profilemap">
+    <a href="waitingForPlayer"><area id="joinGame" shape="rect" coords="36,400,379,450" alt="Sun"></a>
+    <a href="profile"><area id="profile" shape="rect" coords="36,473,379,523" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="noGamesAvailable">
+
+</template>
+
+<template name="profile">
+  <img class="profile-background" src='images/profile.png' usemap="#profilemap">
+  <map name="profilemap">
+    <a href="joinGame"><area id="goBack" shape="rect" coords="10,26,43,59" alt="Sun"></a>
+    <a href="chatt"><area id="chatt" shape="rect" coords="356,25,394,63" alt="Sun"></a>
+    <a href="achievements"><area id="seeAll" shape="rect" coords="24,592,390,645" alt="Sun"></a>
+    <a href="chooseAvatar"><area id="editAvatar" shape="circle" coords="267,208,22" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="chooseAvatar">
+  <img usemap="#profilemap" border="0" height="736"  src="images/Choose-avatar.png" width="414">
+  <map name="profilemap">
+    <a href="profile"><area id="cancel" shape="circle" coords="354,69,14" alt="Sun"></a>
+    <area shape="circle" coords="126,173,45" alt="Sun" href="#">
+  </map>
+</template>
+
+<template name="chatt">
+  <img usemap="#profilemap" border="0" height="736"  src="images/chatt.png" width="414"/>
+  <map name="profilemap">
+    <a href="profile"><area shape="rect" coords="14,32,39,57" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="achievements">
+  <img usemap="#profilemap" border="0" height="736"  src="images/Achievements.png" width="414"/>
+  <map name="profilemap">
+    <a href="profile"><area id="goBack" shape="rect" coords="10,26,43,59" alt="Sun" href="#"></a>
+    <a href="achievement"><area id="achievement" shape="circle" coords="351,328,38" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="achievement">
+  <img usemap="#profilemap" border="0" height="736"  src="images/Achievement.png" width="414"/>
+  <map name="profilemap">
+    <a href="achievements"><area id="goBack" shape="rect" coords="14,32,39,57" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="waitingForPlayer">
+  <img usemap="#profilemap" border="0" height="736"  src="images/waiting-for-player.png" width="414"/>
+  <map name="profilemap">
+    <a href="readyForGame"><area shape="rect" coords="94,698,301,723" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="readyForGame">
+  <img usemap="#profilemap" border="0" height="736"  src="images/ready-for-game.png" width="414"/>
+  <map name="profilemap">
+    <a href="im-ready"><area shape="rect" coords="36,610,379,665" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="im-ready">
+  <img usemap="#profilemap" border="0" height="736"  src="images/im-ready.png" width="414"/>
+  <map name="profilemap">
+    <a href="inGame"><area shape="rect" coords="36,610,379,665" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="inGame">
+  <img usemap="#profilemap" border="0" height="736"  src="images/in-game.png" width="414"/>
+  <map name="profilemap">
+    <a href="inGameKeyboard"><area shape="rect" coords="332,440,368,473" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="inGameKeyboard">
+  <img usemap="#profilemap" border="0" height="736"  src="images/in-game-keyboard.png" width="414"/>
+  <map name="profilemap">
+    <a href="inGameChatt"><area shape="rect" coords="314,685,411,728" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="inGameChatt">
+  <img usemap="#profilemap" border="0" height="736"  src="images/in-game-chatt.png" width="414"/>
+  <map name="profilemap">
+    <a href="inGameAnswers"><area shape="rect" coords="13,37,142,63" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="inGameAnswers">
+  <img usemap="#profilemap" border="0" height="736"  src="images/in-game-answers.png" width="414"/>
+  <map name="profilemap">
+    <a href="inGameHighscore"><area shape="rect" coords="36,642,379,697" alt="Sun"></a>
+  </map>
+</template>
+
+<template name="inGameHighscore">
+  <img usemap="#profilemap" border="0" height="736"  src="images/in-game-highscore.png" width="414"/>
+  <map name="profilemap">
+    <a href="joinGame"><area shape="rect" coords="36,642,379,697" alt="Sun"></a>
+  </map>
+</template>
