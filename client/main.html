@@ -111,10 +111,14 @@
 
 <!-- Waiting for player screen template-->
 <template name="waitingForPlayer">
-  <img usemap="#profilemap" border="0" height="736"  src="images/waiting-for-player.png" width="414"/>
-  <map name="profilemap">
-    <a href="readyForGame"><area shape="rect" coords="94,698,301,723" alt="Sun"></a>
-  </map>
+  <div class="profile-background2">
+    <div class="timepos">
+      Your game will start in <span id="time">10</span> seconds!
+    </div>
+    <map name="profilemap">
+      <a href="readyForGame"><area shape="rect" coords="94,698,301,723" alt="Sun"></a>
+    </map>
+  </div>
 </template>
 
 <!-- Ready for a game screen template-->
