@@ -17,7 +17,7 @@ FlowRouter.triggers.enter([function(context, redirect){
 FlowRouter.route('/', {
   name: 'login',
   action(){
-    BlazeLayout.render('login');
+    BlazeLayout.render('iphone', {main: 'login'});
   }
 });
 
