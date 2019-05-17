@@ -1,8 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-
-
 import './main.html';
 
 FlowRouter.triggers.enter([function(context, redirect){
@@ -47,7 +45,7 @@ FlowRouter.route('/noGamesAvailable', {
 FlowRouter.route('/profile', {
   name: 'profile',
   action(){
-      BlazeLayout.render('iphone', {main: 'profile'});
+    BlazeLayout.render('iphone', {main: 'profile'});
   }
 });
 
@@ -154,22 +152,10 @@ Template.profile.helpers({
   }
 });
 
-$(document).ready(function(){
-  $("p").click(function(){
+$(document).on('click', '.login-buttons-dropdown-align-', function(){
     $(this).hide();
     setTimeout(function(){
       console.log('hej1');
-      location.reload();
+      document.location.reload(true);
     },1000);
-  });
-});
-
-$(document).ready(function(){
-  $("login2").click(function(){
-    $(this).hide();
-    setTimeout(function(){
-      console.log('settings hej1');
-      location.reload();
-    },1000);
-  });
 });

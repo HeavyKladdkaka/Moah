@@ -60,3 +60,13 @@ body {
     position: relative;
     color: black;
 }
+
+.background-image{
+  height: 736px;
+  width: auto;
+}
+
+.profile-background{
+  height: 736px;
+  width: auto;
+}
