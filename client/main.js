@@ -1,6 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
+
+
 import './main.html';
 
 FlowRouter.triggers.enter([function(context, redirect){
@@ -15,9 +17,9 @@ FlowRouter.triggers.enter([function(context, redirect){
 }]);
 
 FlowRouter.route('/', {
-  name: 'hej',
+  name: 'login',
   action(){
-    BlazeLayout.render('iphone');
+    BlazeLayout.render('login');
   }
 });
 
@@ -45,13 +47,7 @@ FlowRouter.route('/noGamesAvailable', {
 FlowRouter.route('/profile', {
   name: 'profile',
   action(){
-    if (Meteor.userId()==null) {
-      console.log('HEJ');
-      BlazeLayout.render('iphone', {main: 'login'});
-    }
-    else {
       BlazeLayout.render('iphone', {main: 'profile'});
-    }
   }
 });
 
@@ -156,4 +152,24 @@ Template.profile.helpers({
     var name = (Meteor.user().profile.name).split(' ');
     return name[0];
   }
+});
+
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+    setTimeout(function(){
+      console.log('hej1');
+      location.reload();
+    },1000);
+  });
+});
+
+$(document).ready(function(){
+  $("login2").click(function(){
+    $(this).hide();
+    setTimeout(function(){
+      console.log('settings hej1');
+      location.reload();
+    },1000);
+  });
 });
