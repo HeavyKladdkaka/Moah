@@ -1,6 +1,5 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-
 import './main.html';
 
 FlowRouter.triggers.enter([function(context, redirect){
@@ -80,7 +79,33 @@ FlowRouter.route('/chooseAvatar', {
 FlowRouter.route('/waitingForPlayer', {
   name: 'waitingForPlayer',
   action(){
+
     BlazeLayout.render('iphone', {main: 'waitingForPlayer'});
+    console.log('first');
+
+    onComplete: function startTimer(duration, display) {
+        console.log('second');
+        var timer = duration, seconds;
+        setInterval(function () {
+          console.log('third');
+            seconds = parseInt(timer % 60, 10);
+            seconds = seconds < 10 ? "" + seconds : seconds;
+            display.textContent = seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+            if (timer == 0){
+              FlowRouter.go('readyForGame');
+              document.location.reload(true);
+            }
+        }, 1000);
+    }
+    window.onload = function () {
+        var fiveMinutes = 10,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
   }
 });
 
@@ -126,7 +151,6 @@ FlowRouter.route('/inGameAnswers', {
   }
 });
 
-
 FlowRouter.route('/login', {
   name: 'login',
   action(){
@@ -159,29 +183,3 @@ $(document).on('click', '.login-buttons-dropdown-align-', function(){
       document.location.reload(true);
     },1000);
 });
-
-function startTimer(duration, display) {
-    var timer = duration, seconds;
-    setInterval(function () {
-
-        seconds = parseInt(timer % 60, 10);
-        seconds = seconds < 10 ? "" + seconds : seconds;
-        display.textContent = seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-        if (timer == 0){
-          FlowRouter.go('readyForGame');
-          document.location.reload(true);
-        }
-
-    }, 1000);
-
-}
-
-window.onload = function () {
-    var fiveMinutes = 10,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};

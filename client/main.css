@@ -54,21 +54,24 @@ body {
   background-size: cover;*/
   background: url("images/settings.png") repeat scroll 0 0 transparent;
   background-size: cover;
-   }
-    .link{
-        padding-left: 26px;
-        padding-top: 23px;
-        position: absolute;
-    }
-    .link a{
-      padding-left: 0;
-      display: block;
-      height: 48px;
-      width: 67px;
-    }
-    .container{
-    position: relative;
-    color: black;
+}
+
+.link{
+  padding-left: 26px;
+  padding-top: 23px;
+  position: absolute;
+}
+
+.link a{
+  padding-left: 0;
+  display: block;
+  height: 48px;
+  width: 67px;
+}
+
+.container{
+  position: relative;
+  color: black;
 }
 
 .background-image{
@@ -85,4 +88,32 @@ body {
   width: 414px;
   background-image: url('images/waiting-for-player.png');
   background-size: cover;
+}
+
+.screen{
+  position: relative;
+}
+
+img{
+  position: absolute;
+}
+
+.form{
+  position: absolute;
+  top:100px;
+  left: 15px;
+  width: 470px;
+
+}
+
+.form input{
+  margin-top: 20px;
+  width: 80%;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border:none;
+  border-bottom: 1px solid rgb(255,255,255, 0.3);
+  color: #fff;
+  font-size: 1.4em;
+
 }
