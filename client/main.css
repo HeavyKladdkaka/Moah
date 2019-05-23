@@ -81,7 +81,8 @@ body {
 
 .profile-background{
   height: 736px;
-  width: auto;
+  width: 414px;
+  background-size: cover;
 }
 .profile-background2{
   height: 736px;
@@ -92,10 +93,6 @@ body {
 
 .screen{
   position: relative;
-}
-
-img{
-  position: absolute;
 }
 
 .form{
